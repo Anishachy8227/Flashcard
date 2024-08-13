@@ -1,0 +1,111 @@
+/* this is the style for the entire document */
+body {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: #6ec5ff;
+  }
+  
+  /* styling for the card section */
+  .thecard {
+      height: 350px;
+      width: 650px;
+      position: relative; 
+      transform-style: preserve-3d;
+      transition: all 0.75s ease;
+      cursor: pointer;
+    }
+  
+  /* styling for the front and back of the cards */
+    .cardFront, .cardBack{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 4em;
+      border-radius: 10px;
+      position: absolute;
+    }
+  
+  /* visibility and z index of card front */
+    .cardFront {
+      background-color: rgb(255, 255, 255);
+      z-index: 2;
+      backface-visibility: hidden;
+    }
+  
+  /* z index and transform style for card back */
+    .cardBack {
+      background-color: white;
+      z-index: 1;
+      transform: rotateX(180deg);
+    }
+  
+  /* style for all paragraph elements */
+  p {
+   text-align: center;
+   font-size: 24px;
+   padding: 1.5rem;
+  }
+  
+  /* rotating index card for the flip */
+  .flipCard {
+    transform: rotateX(-180deg);
+  }
+  
+  .flipBack {
+    transform: rotateX(180deg);
+  }
+  
+  /* styling the perspective of the card container */
+  /* .container{
+  } */
+  /* styling the counter between the buttons */
+  .counter {
+    padding: 1rem;
+    font-size: 20px;
+  }
+  /* styling for the right and left arrows */
+  /* .leftArrow, .rightArrow {
+   padding: 0 3rem;
+  } */
+  
+  /* styling for elements between buttons */
+  .current, .slash, .total {
+    text-align: center;
+    padding: 1rem 0.5rem;
+  }
+  /* styling for buttons */
+  .buttons {
+    padding: 10px;
+  }
+  /* styling for next and back buttons */
+  .back, .next {
+    font-size: 20px;
+  }
+  
+  @media screen and (max-device-width: 800px) {
+    .thecard {
+      height: 450px;
+      width: 850px;
+    }
+  
+    p, h1  {
+      font-size: 2.5rem;
+    }
+  
+    .back,.next, .slash {
+      font-size: 2.5rem;
+      padding: 3px;
+    }
+  
+    .current, .total {
+      font-size: 2.5rem;
+      padding: 0 20px;
+    }
+    
+  }
