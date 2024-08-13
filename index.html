@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Flash Cards</title>
+    <link rel="stylesheet" href="resources/styles.css">
+  </head>
+  <body>
+    <h1>Flash Card Quiz</h1>
+    <br>
+<!-- this is where the questions and answers are contained -->
+<section id="container" class="container" >
+      <section class="thecard" id="thecard">
+          <section class="cardFront" id="cardFront">
+            <!-- questions will be on the front of the card -->
+              <p id="questions" class="questions">Question</p>
+          </section>
+          <section id="cardBack" class="cardBack" >
+            <!-- answers will be on the back -->
+                 <p id="answers" class="answers">Answer</p>
+        </section>
+      </section>
+</section>
+
+<!-- this is the counter in between the buttons -->
+<section id="buttons" class="buttons">
+  <button type="button" name="button" id="back" class="back">back</button>
+  <span class="current" id="current"></span>
+  <span class="slash" id="slash">/</span>
+   <span class="total" id="total">placeholder</span>
+   <span class="rightArrow" id="rightArrow">
+  <button type="button" name="button" id="next" class="next">next</button>
+</section>
+
+
+    <script src="resources/script/script.js" charset="utf-8"></script>
+
+  </body>
+</html>
